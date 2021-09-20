@@ -1,19 +1,18 @@
 class Parameters:
-    possible_names = ["atom", "conceptnet"]
+    data_dir = "../data/"
     possible_types = ["train", "dev", "test"]
-    target_name = "atom"
     target_type = "test"
+    num_samples = 3
     random_sampling = True
-    atom_dir = "../data/atomic/"
-    conceptnet_dir = "../data/conceptnet/"
+    pickle_dir = "../results/gens/atomic-generation/chosen_ones/6.25e-05_adam_64_22000/test_top_k.gens"
     save_to_file = True
-    save_dir = f"../data/samples/{target_name}_{target_type}_sample.txt"
+    save_dir = f"../data/samples/{target_type}_sample.txt"
     name_type2dir = {
-            "atom|train": "v4_atomic_trn.csv",
-            "atom|dev": "v4_atomic_trn.csv",
-            "atom|test": "v4_atomic_trn.csv",
-            "conceptnet|train": "",
-            "conceptnet|dev": "",
-            "conceptnet|test": "",
+            "atomic|train": "v4_atomic_trn.csv",
+            "atomic|dev": "v4_atomic_trn.csv",
+            "atomic|test": "v4_atomic_trn.csv",
+            "conceptnet|train": "train100k.txt",
+            "conceptnet|dev": "dev1.txt", # there is also "dev2.txt" but it is skipped.
+            "conceptnet|test": "test.txt",
     }
 
